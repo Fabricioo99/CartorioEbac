@@ -119,18 +119,20 @@ int main ()
        system("cls");
        
 	   setlocale(LC_ALL, "Portuguese"); //Definindo a Linguagem
+	
 	   printf ("              ###Cartório da EBAC ###\n\n"); // Inicio do Menu
 	   printf (" Aperte a tecla numérica para selecionar a opção desejada.\n\n");
-	   printf (" 1 - Registro de Usúario\n");
-	   printf (" 2 - Consultar Usúario\n");
-	   printf (" 3 - Deletar Usúario\n\n\n"); //Fim do Menu
-	   printf ("Opção:");
+	   printf (" \t1 - Registro de Usúario\n");
+	   printf ("\t2 - Consultar Usúario\n");
+	   printf ("\t3 - Deletar Usúario\n"); 
+	   printf ("\t4 - Sair do sistema.\n\n");
+	   printf ("opção: "); // Fim do Menu
 
-	   scanf("%d" , &opcao);
+	   scanf("%d" , &opcao); //Armazenando escolha do usuário
 	
 	   system("cls"); // Responsável por limpar a Tela
 	   
-	   switch(opcao)
+	   switch(opcao) //Inicio da seleção do Menu
 	   {
 	       case 1:
 	       	registro(); //Chamada de Funções
@@ -142,6 +144,11 @@ int main ()
 		   
 		   case 3:
 		   	deletar();
+		    break;
+		    
+		    case 4:
+		    printf("Obrigado por ultilizar o sistema!\n");
+		    return 0;
 		    break;
 		   
 		   default:
